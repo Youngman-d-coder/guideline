@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.session-container {
+  background-color: black;
+  color: white;
+  height: 140vh;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.session-container h1 {
+  padding-top: 5%;
+  font-size: 300%;
+  font-weight: 100;
+}
+
+.session-container p {
+  padding-top: 3%;
+}
+
+/* .session-images div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.session-images div {
+  width: calc(100% / 4);
+}
+
+.session-images {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.session-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 0.5px;
+  color: white;
+  position: relative;
+}
+
+.session-images div {
+  width: 100%;
+  height: 100%;
+}
+
+.session-images div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.text {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.session-images div:hover .text {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-align: center;
+  align-content: center;
+  font-size: xx-large;
+  max-width: fit-content;
+}
+
+.partnership-container {
+  height: 65vh;
+  background-image: url(../images/session/img_8.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.arrow {
+  font-size: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: whitesmoke;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.write {
+  text-align: center;
+  margin: auto;
+  color: rgba(0, 0, 0, 1);
+}
+
+.h {
+  font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.pa {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 9px;
+  line-height: 25px;
+}
+
+.image {
+  object-fit: cover;
+  height: 15vh;
+  border-radius: 100%;
+  width: 140px;
+  margin-top: 50px;
+}
+
+.clients {
+  height: 50vh;
+}
+
+h4 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.marquee-container {
+  display: flex;
+  gap: 120px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(103%);
+  }
+  100% {
+    transform: translateX(-103%);
+  }
+}
+.marquee-container div img {
+  height: 100px;
+  margin-top: 50px;
+  image-resolution: 100%;
+}
+
+.button {
+  height: 15vh;
+  background: aquamarine;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+p {
+  margin: auto;
+}
+
+#btn {
+  border: 2px solid black;
+  height: 60px;
+  width: 300px;
+  background: palevioletred;
+}
+
+#btn:hover {
+  border: 2px solid black;
+  height: 60px;
+  width: 300px;
+  background: rgba(255, 203, 220, 0.3);
+}
+@media (max-width: 834px) {
+  .session-container {
+    height: 50vh;
+  }
+
+  .session-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 0.1px;
+    color: white;
+    position: relative;
+  }
+  .session-images div {
+    width: 30%;
+    height: 30%;
+    padding: 0;
+    margin: 0;
+  }
+  .session-images div img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  .marquee-container {
+    width: 200vw;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+  }
+}
